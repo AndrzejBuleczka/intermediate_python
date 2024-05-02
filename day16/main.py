@@ -8,7 +8,6 @@ coffee_maker = CoffeeMaker()
 money_machine = MoneyMachine()
 
 is_on = True
-profit = 0
 
 while is_on:
     options = menu.get_items()
