@@ -17,7 +17,7 @@ def move_forwards():
 
 
 for x in range(100):
-    tim.color(randint(1, 4), randint(0, 255), randint(0, 255))
+    tim.color(randint(0, 255), randint(0, 255), randint(0, 255))
     move_forwards()
 
 
