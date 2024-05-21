@@ -1,5 +1,7 @@
 import time
 from turtle import Screen
+
+from scoreboard import create_scoreboard
 from snake import Snake
 from food import Food
 
@@ -26,6 +28,7 @@ screen.onkey(snake.right, "Right")
 
 game_is_on = True
 while game_is_on:
+    create_scoreboard()
     screen.update()
     time.sleep(0.1)
 
