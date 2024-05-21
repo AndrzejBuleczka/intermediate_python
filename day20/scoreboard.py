@@ -4,10 +4,16 @@ ALIGNMENT = "center"
 FONT = ("Roboto", 16, "normal")
 
 
-def create_scoreboard(player_score):
-    score = Turtle()
-    score.penup()
-    score.color("white")
-    score.goto(0, 270)
-    score.write(f"Score: {player_score}", align=ALIGNMENT, font=FONT)
-    return score
+class Scoreboard(Turtle):
+    def __init__(self):
+        super().__init__()
+        self.score = 0
+        self.color("white")
+        self.penup()
+        self.goto(0, 270)
+        self.write(f"Score: {self.score}", align=ALIGNMENT, font=FONT)
+
+    def update_score(self):
+        self.score += 1
+        self.clear()
+        self.write(f"Score: {self.score}", align=ALIGNMENT, font=FONT)
